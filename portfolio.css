@@ -1,0 +1,148 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    position: absolute; /* Position the nav bar within the home section */
+    top: 15%; /* Align to the top of the home section */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for exact centering */
+    z-index: 5; /* Ensure it's above other content */
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Align nav to the top */
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    display: inline-block;
+    width: 80px; /* Size of the buttons */
+    height: 40px;
+    line-height: 40px; /* Align text vertically */
+    border-radius: 80%; /* Make it round */
+    background-color: #333; /* Default background color */
+    color: white; /* Text color */
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+nav ul li a:hover {
+    background-color: #007acc; /* Color on hover */
+}
+
+home {
+    position: relative; /* Position relative to contain the canvas */
+    min-height: 100vh; /* Adjust this if needed */
+    width: 100%;
+    /* More styles for your main content */
+}
+
+#canvas {
+    position: relative; /* Positioned relative to the main */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; /* Adjust height as per the main section's height */
+    background-image: radial-gradient(#007acc 0%,  #3e3e42 40%, #1e1e1e 100%);
+    z-index: 1;
+}
+
+section {
+    min-height: 50%vh; /* 100% of the viewport height */
+    width: 100%; /* 100% of the viewport width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5; /* Above canvas but below nav */
+    text-align: center;
+}
+
+.headshot {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.brief-description {
+    color: white;
+    size: 20%;
+}
+
+#projects {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.project-card {
+    width: 70%; /* Adjust based on preference */
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin: 10px;
+    text-align: center;
+}
+
+.project-card img {
+    width: 100%; /* Adjust based on preference */
+    height: auto;
+    border-radius: 5px;
+}
+
+.project-card h3 {
+    margin: 10px 0;
+}
+
+.project-card p {
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.profile-buttons {
+    position: absolute;
+    bottom: -30%; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.profile-buttons .btn {
+    /* Additional styling specific to these buttons if needed */
+    margin: 0 10px; /* Spacing between buttons */
+    border-radius: 80%; /* Make it round */
+
+}
