@@ -99,23 +99,62 @@ section {
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     margin: 10px;
-    text-align: center;
+    display: flex;
+    align-items: center;
 }
 
-.project-card img {
-    width: 100%; /* Adjust based on preference */
+.project-photo {
+    border-radius: 5px;
+    flex: 1;
+}
+.project-photo img {
+    max-width: 80%;
+    border-radius: 5px;
+}
+.project-info{
+    flex: 2;    
+}
+.connect4{
+    max-width: 60%;
+    padding-left: 20%;
+}
+
+
+
+.school-card {
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin: 10px;
+    padding: 10px;
+    width: 50%; /* Adjust based on preference, smaller than project cards */
+    
+}
+
+.school-photo {
+    flex: 1;
+    padding-right: 10px;
+  
+}
+
+.school-photo img {
+    width: 100%;
     height: auto;
     border-radius: 5px;
 }
 
-.project-card h3 {
-    margin: 10px 0;
+.school-info {
+    flex: 2;
+    padding-left: 10px;
 }
 
-.project-card p {
-    font-size: 0.9em;
-    line-height: 1.6;
+.school-name {
+    font-family: 'Times New Roman', Times, serif; /* Fancier font for school name */
+    font-size: 1.5em;
+    margin: 0 0 10px 0;
 }
+
+
 
 .btn {
     display: inline-block;
@@ -147,7 +186,7 @@ section {
 
 }
 
-#about {
+#skills {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -155,25 +194,33 @@ section {
 }
 
 .container {
-    display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 1000px; /* Adjust as needed */
+    max-width: 100%; /* Adjust as needed */
     margin: auto;
 }
 
-.languages-photo {
-    flex: 1; /* Adjust the ratio between image and text as needed */
-    padding-right: 20px; /* Space between image and text */
+.skill-box {
+
+    flex-wrap: wrap;
+    justify-content: center; /* Center items horizontally */
+    gap: 10px; /* Spacing between images */
+    max-width: 80%; /* Adjust as needed */
+    margin: auto;
 }
 
-.languages-photo img {
-    width: 100%; /* Make the image responsive */
-    height: auto;
-    border-radius: 10px; /* Optional: for rounded corners */
+.skill-box img {
+    width: 25%; /* Adjust based on your preference */
+    height: 50px; /* Maintain the aspect ratio */
+    object-fit: contain; /* Ensure the images are properly scaled */
+
+    transition: transform 0.1s ease;
+
+
+    
 }
 
-.about-text {
-    flex: 1;
-    padding-left: 20px; /* Space between text and image */
+
+.headline{
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }

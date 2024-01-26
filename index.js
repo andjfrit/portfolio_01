@@ -118,3 +118,19 @@ init();
 window.addEventListener("resize", resizeReset);
 window.addEventListener("mousemove", mousemove);
 window.addEventListener("mouseout", mouseout);
+document.addEventListener('mousemove', parallax);
+
+
+
+function parallax(e) {
+    document.querySelectorAll('.skill-img').forEach(function(img) {
+        const movingValueX = (Math.random() - 0.5) * 10; // Random factor for X movement
+        const movingValueY = (Math.random() - 0.5) * 10; // Random factor for Y movement
+        const x = (window.innerWidth / 2 - e.clientX) * movingValueX / 250;
+        const y = (window.innerHeight / 2 - e.clientY) * movingValueY / 250;
+
+        img.style.transform = `translate(${x}px, ${y}px)`;
+    });
+}
+
+
