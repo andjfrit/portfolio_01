@@ -76,15 +76,23 @@ section {
     text-align: center;
 }
 
+
 .headshot {
-    width: 100px;
-    height: 100px;
+    width: 175px;
+    height: 175px;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit:cover;
+    object-position: top; 
+    
+    
 }
 .brief-description {
-    color: white;
-    size: 20%;
+    background-color: rgb(255, 255, 255,.4); /* White background with 70% opacity */
+    padding: 10px; /* Add some padding around the text */
+    border-radius: 10px; /* Optiona*/
+    color: black;
+    size: 30%;
+    font-weight: bold;
 }
 
 #projects {
